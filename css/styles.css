@@ -1,0 +1,114 @@
+
+
+/* Estilo personalizado para el enlace bloqueado */
+.nav-link.bloqueado {
+    color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* ==========================================
+   SECCIÓN HERO PERSONALIZADA (SIN BOOTSTRAP)
+   ========================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1920');
+  background-size: cover;       /* Ajusta la imagen para que llene todo el espacio */
+  background-position: center;  /* Centra la imagen de fondo */
+  background-repeat: no-repeat;
+
+  /* Centrado total usando Flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 800px;
+  color: #ffffff;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 35px;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Contenedor de los botones */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn-custom-primary, .btn-custom-secondary {
+  text-decoration: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.3s ease; /* Suaviza la animación del hover */
+}
+
+/* Botón Principal (Blanco sólido con texto oscuro) */
+.btn-custom-primary {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+.btn-custom-primary:hover {
+  background-color: #e2e2e2;
+  transform: translateY(-2px); /* Pequeño salto hacia arriba al pasar el ratón */
+}
+
+/* Botón Secundario (Transparente con borde blanco) */
+.btn-custom-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.btn-custom-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+@media (min-width: 992px) {
+    .navbar-collapse {
+        display: flex;
+        justify-content: center;/* Centra el menú en el eje real de la pantalla */
+    }
+
+    .navbar-nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* movil */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .hero-buttons {
+    flex-direction: column; /* Apila los botones uno sobre otro en móviles */
+  }
+}
