@@ -1,0 +1,11 @@
+@media (min-width: 992px) {
+      .navbar-collapse {
+        display: flex;
+        justify-content: center; /* Centra el menú en el eje real de la pantalla */
+      }
+      .navbar-nav {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
